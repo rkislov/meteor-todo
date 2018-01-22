@@ -6,9 +6,13 @@
           <input type="checkbox" />
           Скрыть выполненные
         </label>
+
+        {{> loginButtons}}
+        {{#if currentUser}}
     <form class="new-task">
         <input type="text" name="text" placeholder="Выедите новую задачу" />
     </form>  
+    {{/if}}
     </header>
    
       <ul>
