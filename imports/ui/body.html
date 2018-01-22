@@ -1,7 +1,11 @@
 <body>
     <div class="container">
       <header>
-        <h1>Задачи</h1>
+        <h1>Задачи ({{incompletedCount}})</h1>
+        <label class="hide-completed">
+          <input type="checkbox" />
+          Скрыть выполненные
+        </label>
     <form class="new-task">
         <input type="text" name="text" placeholder="Выедите новую задачу" />
     </form>  
