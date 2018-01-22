@@ -1,17 +1,20 @@
 <body>
     <div class="container">
-        <header>
-            <h1>ToDo List</h1>
-        </header>
-    </div>
-    <ul>
+      <header>
+        <h1>Задачи</h1>
+    <form class="new-task">
+        <input type="text" name="text" placeholder="Выедите новую задачу" />
+    </form>  
+    </header>
+   
+      <ul>
         {{#each tasks}}
-            {{>task}}
+          {{> task}}
         {{/each}}
-    </ul>
-</body>
-
-
-<template name="task">
-    <li>{{text}}</li>
-</template>
+      </ul>
+    </div>
+  </body>
+   
+  <template name="task">
+    <li>{{text}} <span style="font-size: 8px;">({{formatDate createdAt}})</span></li>
+  </template>
